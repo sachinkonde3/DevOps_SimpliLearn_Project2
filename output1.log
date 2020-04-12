@@ -1,0 +1,420 @@
+root@sachinkonde3gma:/home/sachinkonde3gma/myAng-app# docker build -t myangularapp .
+Sending build context to Docker daemon  415.1MB
+Step 1/9 : FROM node:12
+12: Pulling from library/node
+56da78ce36e9: Pull complete
+fbfe0f13ac45: Pull complete
+6254ff6d0e60: Pull complete
+e0e1e13bd9f6: Pull complete
+b86b38b40a24: Pull complete
+e357e1a6c1b2: Pull complete
+497a8bd3a261: Pull complete
+1481de747131: Pull complete
+95f88b8d1c6d: Pull complete
+Digest: sha256:f02f93c7529f7463a978857a4a244faf29b911c108b988c2d1796dc9466cda7d
+Status: Downloaded newer image for node:12
+ ---> 0c601cba9f11
+Step 2/9 : RUN mkdir /usr/src/app
+ ---> Running in 7658f882962f
+Removing intermediate container 7658f882962f
+ ---> 3d830651309a
+Step 3/9 : WORKDIR /usr/src/app
+ ---> Running in 537de68a7745
+Removing intermediate container 537de68a7745
+ ---> e5f5f2eca383
+Step 4/9 : ENV PATH /usr/src/app/node_modules/.bin:$PATH
+ ---> Running in 67e8f15b6032
+Removing intermediate container 67e8f15b6032
+ ---> b0adba957bfe
+Step 5/9 : COPY package.json /usr/src/app/package.json
+ ---> ce0e481c21ca
+Step 6/9 : RUN npm install
+ ---> Running in 214e1b5dda31
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+
+> core-js@3.6.4 postinstall /usr/src/app/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+
+The project needs your help! Please consider supporting of core-js on Open Collective or Patreon:
+> https://opencollective.com/core-js
+> https://www.patreon.com/zloirock
+
+Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+
+
+> @angular/cli@9.1.1 postinstall /usr/src/app/node_modules/@angular/cli
+> node ./bin/postinstall/script.js
+
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.1.2 (node_modules/rollup/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.2.7 (node_modules/watchpack/node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.12: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.2.7 (node_modules/webpack-dev-server/node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.12: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: abbrev@1.1.1 (node_modules/watchpack/node_modules/fsevents/node_modules/abbrev):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/abbrev' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.abbrev.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: ansi-regex@2.1.1 (node_modules/watchpack/node_modules/fsevents/node_modules/ansi-regex):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/ansi-regex' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.ansi-regex.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: aproba@1.2.0 (node_modules/watchpack/node_modules/fsevents/node_modules/aproba):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/aproba' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.aproba.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: balanced-match@1.0.0 (node_modules/watchpack/node_modules/fsevents/node_modules/balanced-match):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/balanced-match' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.balanced-match.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: chownr@1.1.4 (node_modules/watchpack/node_modules/fsevents/node_modules/chownr):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/chownr' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.chownr.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: code-point-at@1.1.0 (node_modules/watchpack/node_modules/fsevents/node_modules/code-point-at):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/code-point-at' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.code-point-at.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: concat-map@0.0.1 (node_modules/watchpack/node_modules/fsevents/node_modules/concat-map):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/concat-map' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.concat-map.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: console-control-strings@1.1.0 (node_modules/watchpack/node_modules/fsevents/node_modules/console-control-strings):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/console-control-strings' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.console-control-strings.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: core-util-is@1.0.2 (node_modules/watchpack/node_modules/fsevents/node_modules/core-util-is):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/core-util-is' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.core-util-is.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: deep-extend@0.6.0 (node_modules/watchpack/node_modules/fsevents/node_modules/deep-extend):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/deep-extend' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.deep-extend.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: delegates@1.0.0 (node_modules/watchpack/node_modules/fsevents/node_modules/delegates):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/delegates' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.delegates.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: detect-libc@1.0.3 (node_modules/watchpack/node_modules/fsevents/node_modules/detect-libc):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/detect-libc' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.detect-libc.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fs.realpath@1.0.0 (node_modules/watchpack/node_modules/fsevents/node_modules/fs.realpath):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/fs.realpath' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.fs.realpath.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: has-unicode@2.0.1 (node_modules/watchpack/node_modules/fsevents/node_modules/has-unicode):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/has-unicode' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.has-unicode.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: inherits@2.0.4 (node_modules/watchpack/node_modules/fsevents/node_modules/inherits):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/inherits' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.inherits.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: ini@1.3.5 (node_modules/watchpack/node_modules/fsevents/node_modules/ini):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/ini' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.ini.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: isarray@1.0.0 (node_modules/watchpack/node_modules/fsevents/node_modules/isarray):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/isarray' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.isarray.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: minimist@1.2.5 (node_modules/watchpack/node_modules/fsevents/node_modules/minimist):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/minimist' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.minimist.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: ms@2.1.2 (node_modules/watchpack/node_modules/fsevents/node_modules/ms):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/ms' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.ms.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: npm-normalize-package-bin@1.0.1 (node_modules/watchpack/node_modules/fsevents/node_modules/npm-normalize-package-bin):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/npm-normalize-package-bin' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.npm-normalize-package-bin.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: number-is-nan@1.0.1 (node_modules/watchpack/node_modules/fsevents/node_modules/number-is-nan):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/number-is-nan' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.number-is-nan.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: object-assign@4.1.1 (node_modules/watchpack/node_modules/fsevents/node_modules/object-assign):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/object-assign' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.object-assign.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: os-homedir@1.0.2 (node_modules/watchpack/node_modules/fsevents/node_modules/os-homedir):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/os-homedir' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.os-homedir.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: os-tmpdir@1.0.2 (node_modules/watchpack/node_modules/fsevents/node_modules/os-tmpdir):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/os-tmpdir' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.os-tmpdir.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: path-is-absolute@1.0.1 (node_modules/watchpack/node_modules/fsevents/node_modules/path-is-absolute):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/path-is-absolute' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.path-is-absolute.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: process-nextick-args@2.0.1 (node_modules/watchpack/node_modules/fsevents/node_modules/process-nextick-args):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/process-nextick-args' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.process-nextick-args.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: safe-buffer@5.1.2 (node_modules/watchpack/node_modules/fsevents/node_modules/safe-buffer):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/safe-buffer' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.safe-buffer.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: safer-buffer@2.1.2 (node_modules/watchpack/node_modules/fsevents/node_modules/safer-buffer):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/safer-buffer' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.safer-buffer.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: sax@1.2.4 (node_modules/watchpack/node_modules/fsevents/node_modules/sax):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/sax' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.sax.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: semver@5.7.1 (node_modules/watchpack/node_modules/fsevents/node_modules/semver):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/semver' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.semver.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: set-blocking@2.0.0 (node_modules/watchpack/node_modules/fsevents/node_modules/set-blocking):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/set-blocking' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.set-blocking.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: signal-exit@3.0.2 (node_modules/watchpack/node_modules/fsevents/node_modules/signal-exit):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/signal-exit' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.signal-exit.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: strip-json-comments@2.0.1 (node_modules/watchpack/node_modules/fsevents/node_modules/strip-json-comments):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/strip-json-comments' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.strip-json-comments.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: util-deprecate@1.0.2 (node_modules/watchpack/node_modules/fsevents/node_modules/util-deprecate):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/util-deprecate' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.util-deprecate.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: wrappy@1.0.2 (node_modules/watchpack/node_modules/fsevents/node_modules/wrappy):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/wrappy' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.wrappy.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: yallist@3.1.1 (node_modules/watchpack/node_modules/fsevents/node_modules/yallist):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/yallist' -> '/usr/src/app/node_modules/watchpack/node_modules/fsevents/node_modules/.yallist.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: abbrev@1.1.1 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/abbrev):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/abbrev' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.abbrev.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: ansi-regex@2.1.1 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/ansi-regex):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/ansi-regex' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.ansi-regex.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: aproba@1.2.0 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/aproba):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/aproba' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.aproba.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: balanced-match@1.0.0 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/balanced-match):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/balanced-match' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.balanced-match.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: chownr@1.1.4 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/chownr):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/chownr' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.chownr.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: code-point-at@1.1.0 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/code-point-at):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/code-point-at' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.code-point-at.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: concat-map@0.0.1 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/concat-map):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/concat-map' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.concat-map.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: console-control-strings@1.1.0 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/console-control-strings):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/console-control-strings' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.console-control-strings.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: core-util-is@1.0.2 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/core-util-is):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/core-util-is' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.core-util-is.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: deep-extend@0.6.0 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/deep-extend):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/deep-extend' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.deep-extend.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: delegates@1.0.0 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/delegates):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/delegates' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.delegates.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: detect-libc@1.0.3 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/detect-libc):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/detect-libc' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.detect-libc.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fs.realpath@1.0.0 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/fs.realpath):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/fs.realpath' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.fs.realpath.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: has-unicode@2.0.1 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/has-unicode):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/has-unicode' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.has-unicode.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: inherits@2.0.4 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/inherits):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/inherits' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.inherits.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: ini@1.3.5 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/ini):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/ini' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.ini.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: isarray@1.0.0 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/isarray):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/isarray' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.isarray.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: minimist@1.2.5 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/minimist):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/minimist' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.minimist.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: ms@2.1.2 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/ms):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/ms' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.ms.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: npm-normalize-package-bin@1.0.1 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/npm-normalize-package-bin):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/npm-normalize-package-bin' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.npm-normalize-package-bin.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: number-is-nan@1.0.1 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/number-is-nan):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/number-is-nan' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.number-is-nan.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: object-assign@4.1.1 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/object-assign):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/object-assign' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.object-assign.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: os-homedir@1.0.2 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/os-homedir):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/os-homedir' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.os-homedir.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: os-tmpdir@1.0.2 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/os-tmpdir):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/os-tmpdir' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.os-tmpdir.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: path-is-absolute@1.0.1 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/path-is-absolute):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/path-is-absolute' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.path-is-absolute.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: process-nextick-args@2.0.1 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/process-nextick-args):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/process-nextick-args' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.process-nextick-args.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: safe-buffer@5.1.2 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/safe-buffer):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/safe-buffer' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.safe-buffer.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: safer-buffer@2.1.2 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/safer-buffer):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/safer-buffer' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.safer-buffer.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: sax@1.2.4 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/sax):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/sax' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.sax.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: semver@5.7.1 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/semver):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/semver' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.semver.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: set-blocking@2.0.0 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/set-blocking):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/set-blocking' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.set-blocking.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: signal-exit@3.0.2 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/signal-exit):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/signal-exit' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.signal-exit.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: strip-json-comments@2.0.1 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/strip-json-comments):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/strip-json-comments' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.strip-json-comments.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: util-deprecate@1.0.2 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/util-deprecate):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/util-deprecate' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.util-deprecate.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: wrappy@1.0.2 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/wrappy):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/wrappy' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.wrappy.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: yallist@3.1.1 (node_modules/webpack-dev-server/node_modules/fsevents/node_modules/yallist):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/yallist' -> '/usr/src/app/node_modules/webpack-dev-server/node_modules/fsevents/node_modules/.yallist.DELETE'
+
+added 1393 packages from 1122 contributors and audited 15988 packages in 82.03s
+
+47 packages are looking for funding
+  run `npm fund` for details
+
+found 2 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+Removing intermediate container 214e1b5dda31
+ ---> d6f4ada4b82b
+Step 7/9 : RUN npm install -g @angular/cli@1.7.1
+ ---> Running in 16c60ee8a910
+npm WARN deprecated extract-text-webpack-plugin@3.0.2: Deprecated. Please use https://github.com/webpack-contrib/mini-css-extract-plugin
+npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated browserslist@2.11.3: Browserslist 2 could fail on reading Browserslist >3.0 config used in other tools.
+npm WARN deprecated core-js@2.6.11: core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3.
+npm WARN deprecated request@2.81.0: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated hawk@3.1.3: This module moved to @hapi/hawk. Please make sure to switch over as this distribution is no longer supported and may contain bugs and critical security issues.
+npm WARN deprecated cryptiles@2.0.5: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
+npm WARN deprecated boom@2.10.1: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
+npm WARN deprecated hoek@2.16.3: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
+npm WARN deprecated sntp@1.0.9: This module moved to @hapi/sntp. Please make sure to switch over as this distribution is no longer supported and may contain bugs and critical security issues.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+/usr/local/bin/ng -> /usr/local/lib/node_modules/@angular/cli/bin/ng
+
+> node-sass@4.13.1 install /usr/local/lib/node_modules/@angular/cli/node_modules/node-sass
+> node scripts/install.js
+
+Unable to save binary /usr/local/lib/node_modules/@angular/cli/node_modules/node-sass/vendor/linux-x64-72 : Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/@angular/cli/node_modules/node-sass/vendor'
+    at Object.mkdirSync (fs.js:841:3)
+    at sync (/usr/local/lib/node_modules/@angular/cli/node_modules/mkdirp/index.js:72:13)
+    at Function.sync (/usr/local/lib/node_modules/@angular/cli/node_modules/mkdirp/index.js:78:24)
+    at checkAndDownloadBinary (/usr/local/lib/node_modules/@angular/cli/node_modules/node-sass/scripts/install.js:114:11)
+    at Object.<anonymous> (/usr/local/lib/node_modules/@angular/cli/node_modules/node-sass/scripts/install.js:157:1)
+    at Module._compile (internal/modules/cjs/loader.js:1156:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+    at Module.load (internal/modules/cjs/loader.js:1000:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:899:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12) {
+  errno: -13,
+  syscall: 'mkdir',
+  code: 'EACCES',
+  path: '/usr/local/lib/node_modules/@angular/cli/node_modules/node-sass/vendor'
+}
+
+> core-js@2.6.11 postinstall /usr/local/lib/node_modules/@angular/cli/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+
+The project needs your help! Please consider supporting of core-js on Open Collective or Patreon:
+> https://opencollective.com/core-js
+> https://www.patreon.com/zloirock
+
+Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+
+
+> ejs@2.7.4 postinstall /usr/local/lib/node_modules/@angular/cli/node_modules/ejs
+> node ./postinstall.js
+
+Thank you for installing EJS: built with the Jake JavaScript build tool (https://jakejs.com/)
+
+
+> uglifyjs-webpack-plugin@0.4.6 postinstall /usr/local/lib/node_modules/@angular/cli/node_modules/webpack/node_modules/uglifyjs-webpack-plugin
+> node lib/post_install.js
+
+
+> node-sass@4.13.1 postinstall /usr/local/lib/node_modules/@angular/cli/node_modules/node-sass
+> node scripts/build.js
+
+Building: /usr/local/bin/node /usr/local/lib/node_modules/@angular/cli/node_modules/node-gyp/bin/node-gyp.js rebuild --verbose --libsass_ext= --libsass_cflags= --libsass_ldflags= --libsass_library=
+gyp info it worked if it ends with ok
+gyp verb cli [
+gyp verb cli   '/usr/local/bin/node',
+gyp verb cli   '/usr/local/lib/node_modules/@angular/cli/node_modules/node-gyp/bin/node-gyp.js',
+gyp verb cli   'rebuild',
+gyp verb cli   '--verbose',
+gyp verb cli   '--libsass_ext=',
+gyp verb cli   '--libsass_cflags=',
+gyp verb cli   '--libsass_ldflags=',
+gyp verb cli   '--libsass_library='
+gyp verb cli ]
+gyp info using node-gyp@3.8.0
+gyp info using node@12.16.2 | linux | x64
+gyp verb command rebuild []
+gyp verb command clean []
+gyp verb clean removing "build" directory
+gyp verb command configure []
+gyp verb check python checking for Python executable "python2" in the PATH
+gyp verb `which` succeeded python2 /usr/bin/python2
+gyp verb check python version `/usr/bin/python2 -c "import sys; print "2.7.13
+gyp verb check python version .%s.%s" % sys.version_info[:3];"` returned: %j
+gyp verb get node dir no --target version specified, falling back to host node version: 12.16.2
+gyp verb command install [ '12.16.2' ]
+gyp verb install input version string "12.16.2"
+gyp verb install installing version: 12.16.2
+gyp verb install --ensure was passed, so won't reinstall if already installed
+gyp WARN EACCES user "undefined" does not have permission to access the dev dir "/root/.node-gyp/12.16.2"
+gyp WARN EACCES attempting to reinstall using temporary dev dir "/usr/local/lib/node_modules/@angular/cli/node_modules/node-sass/.node-gyp"
+gyp verb tmpdir == cwd automatically will remove dev files after to save disk space
+gyp verb command install [ '--node_gyp_internal_noretry', '12.16.2' ]
+gyp verb install input version string "12.16.2"
+gyp verb install installing version: 12.16.2
+gyp verb install --ensure was passed, so won't reinstall if already installed
+gyp verb install version not already installed, continuing with install 12.16.2
+gyp verb ensuring nodedir is created /usr/local/lib/node_modules/@angular/cli/node_modules/node-sass/.node-gyp/12.16.2
+gyp WARN install got an error, rolling back install
+gyp verb command remove [ '12.16.2' ]
+gyp verb remove using node-gyp dir: /usr/local/lib/node_modules/@angular/cli/node_modules/node-sass/.node-gyp
+gyp verb remove removing target version: 12.16.2
+gyp verb remove removing development files for version: 12.16.2
+gyp WARN install got an error, rolling back install
+gyp verb command remove [ '12.16.2' ]
+gyp verb remove using node-gyp dir: /usr/local/lib/node_modules/@angular/cli/node_modules/node-sass/.node-gyp
+gyp verb remove removing target version: 12.16.2
+gyp verb remove removing development files for version: 12.16.2
+gyp ERR! configure error
+gyp ERR! stack Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/@angular/cli/node_modules/node-sass/.node-gyp'
+gyp ERR! System Linux 4.15.0-1077-azure
+gyp ERR! command "/usr/local/bin/node" "/usr/local/lib/node_modules/@angular/cli/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--verbose" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags=" "--libsass_library="
+gyp ERR! cwd /usr/local/lib/node_modules/@angular/cli/node_modules/node-sass
+gyp ERR! node -v v12.16.2
+gyp ERR! node-gyp -v v3.8.0
+gyp ERR! not ok
+Build failed with error code: 1
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules/@angular/cli/node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.12: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: abbrev@1.1.1 (node_modules/@angular/cli/node_modules/fsevents/node_modules/abbrev):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/abbrev' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.abbrev.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: ansi-regex@2.1.1 (node_modules/@angular/cli/node_modules/fsevents/node_modules/ansi-regex):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/ansi-regex' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.ansi-regex.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: aproba@1.2.0 (node_modules/@angular/cli/node_modules/fsevents/node_modules/aproba):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/aproba' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.aproba.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: balanced-match@1.0.0 (node_modules/@angular/cli/node_modules/fsevents/node_modules/balanced-match):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/balanced-match' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.balanced-match.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: chownr@1.1.4 (node_modules/@angular/cli/node_modules/fsevents/node_modules/chownr):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/chownr' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.chownr.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: code-point-at@1.1.0 (node_modules/@angular/cli/node_modules/fsevents/node_modules/code-point-at):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/code-point-at' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.code-point-at.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: concat-map@0.0.1 (node_modules/@angular/cli/node_modules/fsevents/node_modules/concat-map):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/concat-map' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.concat-map.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: console-control-strings@1.1.0 (node_modules/@angular/cli/node_modules/fsevents/node_modules/console-control-strings):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/console-control-strings' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.console-control-strings.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: core-util-is@1.0.2 (node_modules/@angular/cli/node_modules/fsevents/node_modules/core-util-is):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/core-util-is' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.core-util-is.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: deep-extend@0.6.0 (node_modules/@angular/cli/node_modules/fsevents/node_modules/deep-extend):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/deep-extend' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.deep-extend.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: delegates@1.0.0 (node_modules/@angular/cli/node_modules/fsevents/node_modules/delegates):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/delegates' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.delegates.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: detect-libc@1.0.3 (node_modules/@angular/cli/node_modules/fsevents/node_modules/detect-libc):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/detect-libc' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.detect-libc.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fs.realpath@1.0.0 (node_modules/@angular/cli/node_modules/fsevents/node_modules/fs.realpath):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/fs.realpath' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.fs.realpath.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: has-unicode@2.0.1 (node_modules/@angular/cli/node_modules/fsevents/node_modules/has-unicode):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/has-unicode' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.has-unicode.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: inherits@2.0.4 (node_modules/@angular/cli/node_modules/fsevents/node_modules/inherits):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/inherits' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.inherits.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: ini@1.3.5 (node_modules/@angular/cli/node_modules/fsevents/node_modules/ini):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/ini' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.ini.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: isarray@1.0.0 (node_modules/@angular/cli/node_modules/fsevents/node_modules/isarray):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/isarray' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.isarray.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: minimist@1.2.5 (node_modules/@angular/cli/node_modules/fsevents/node_modules/minimist):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/minimist' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.minimist.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: ms@2.1.2 (node_modules/@angular/cli/node_modules/fsevents/node_modules/ms):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/ms' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.ms.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: npm-normalize-package-bin@1.0.1 (node_modules/@angular/cli/node_modules/fsevents/node_modules/npm-normalize-package-bin):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/npm-normalize-package-bin' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.npm-normalize-package-bin.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: number-is-nan@1.0.1 (node_modules/@angular/cli/node_modules/fsevents/node_modules/number-is-nan):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/number-is-nan' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.number-is-nan.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: object-assign@4.1.1 (node_modules/@angular/cli/node_modules/fsevents/node_modules/object-assign):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/object-assign' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.object-assign.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: os-homedir@1.0.2 (node_modules/@angular/cli/node_modules/fsevents/node_modules/os-homedir):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/os-homedir' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.os-homedir.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: os-tmpdir@1.0.2 (node_modules/@angular/cli/node_modules/fsevents/node_modules/os-tmpdir):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/os-tmpdir' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.os-tmpdir.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: path-is-absolute@1.0.1 (node_modules/@angular/cli/node_modules/fsevents/node_modules/path-is-absolute):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/path-is-absolute' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.path-is-absolute.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: process-nextick-args@2.0.1 (node_modules/@angular/cli/node_modules/fsevents/node_modules/process-nextick-args):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/process-nextick-args' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.process-nextick-args.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: safe-buffer@5.1.2 (node_modules/@angular/cli/node_modules/fsevents/node_modules/safe-buffer):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/safe-buffer' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.safe-buffer.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: safer-buffer@2.1.2 (node_modules/@angular/cli/node_modules/fsevents/node_modules/safer-buffer):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/safer-buffer' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.safer-buffer.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: sax@1.2.4 (node_modules/@angular/cli/node_modules/fsevents/node_modules/sax):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/sax' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.sax.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: semver@5.7.1 (node_modules/@angular/cli/node_modules/fsevents/node_modules/semver):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/semver' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.semver.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: set-blocking@2.0.0 (node_modules/@angular/cli/node_modules/fsevents/node_modules/set-blocking):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/set-blocking' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.set-blocking.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: signal-exit@3.0.2 (node_modules/@angular/cli/node_modules/fsevents/node_modules/signal-exit):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/signal-exit' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.signal-exit.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: strip-json-comments@2.0.1 (node_modules/@angular/cli/node_modules/fsevents/node_modules/strip-json-comments):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/strip-json-comments' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.strip-json-comments.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: util-deprecate@1.0.2 (node_modules/@angular/cli/node_modules/fsevents/node_modules/util-deprecate):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/util-deprecate' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.util-deprecate.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: wrappy@1.0.2 (node_modules/@angular/cli/node_modules/fsevents/node_modules/wrappy):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/wrappy' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.wrappy.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: yallist@3.1.1 (node_modules/@angular/cli/node_modules/fsevents/node_modules/yallist):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/yallist' -> '/usr/local/lib/node_modules/@angular/cli/node_modules/fsevents/node_modules/.yallist.DELETE'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: node-sass@4.13.1 (node_modules/@angular/cli/node_modules/node-sass):
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: node-sass@4.13.1 postinstall: `node scripts/build.js`
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: Exit status 1
+
++ @angular/cli@1.7.1
+added 956 packages from 687 contributors in 56.866s
+Removing intermediate container 16c60ee8a910
+ ---> d229c7995db3
+Step 8/9 : COPY . /usr/src/app
+
+ ---> 58e67d01911d
+Step 9/9 : CMD ng serve --host 0.0.0.0
+ ---> Running in 97173a3c88a9
+Removing intermediate container 97173a3c88a9
+ ---> ea449bb9a101
+Successfully built ea449bb9a101
+Successfully tagged myangularapp:latest
